@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Tip Calculator</title>
-</head>
 
-<body>
-    <h1><span id="tip-word">Tip</span> calculator</h1>
-    <div>
-        <label>Bill Amount:</label><input type="number" id="bill-amount"></br>
-        <label>Percentage Tip:</label><input type="number" id="percentage-tip"></br>
-        <label>Tip Amount:</label><input type="number" id="tip-amount" disabled></br>
-        <label>Total:</label><input type="number" id="total" disabled></br>
-        <button>Calculate</button>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Tip Calculator</title>
+    </head>
+    
+    
+    <body>
+        <div id="app">
+        <h1><span id="tip-word">Tip</span> calculator</h1>
+        <div>
+            <label>Bill Amount:</label><input v-model="billAmount" type="number" id="bill-amount"></br>
+           
+            <label>Percentage Tip:</label><input v-model="percentageTip" type="number" id="percentage-tip"></br>
+           
+            <label>Tip Amount:</label><input v-model="tipAmount" type="number" id="tip-amount" disabled></br>
+           
+            <label>Total:</label><input v-model="total"  type="number" id="total" disabled></br>
+           
+            <button @click="calculate">Calculate</button>
+        </div>
+        
     </div>
-</body>
-
-</html>
+        <script type="module" src="app.js"></script>
+    </body>
+    
+    </html>
