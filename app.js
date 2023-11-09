@@ -18,26 +18,15 @@ import {
 
               console.log("propina: ", tipAmount.value);
               console.log("total: ", total.value);
-          };
-
-          
-                
+          };              
           
 
       return {
-        
           billAmount,
           percentageTip,
           calculate,
           tipAmount,
-          total,
-          
-          
-          
-          
-          
-             
-          
+          total,  
       };
     },
   }).mount("#app");
